@@ -109,28 +109,7 @@ Add the next two receipts to state and make two more Receipt components so that 
 </details>
 
 
-### Part 3: Conditionally Render the receipts if they have been paid or not
-
-Right now, all the receipts are not paid ( `paid: false`)
-
-Set up a ternary operator to display the receipt if it has not been paid.
-
-Then go into the receipt data and change the value to true and check that the receipt will not display
-
-
-![Matt has settled his bill](https://i.imgur.com/90oM59b.png)
-
-
-To seee the `React` tab in the Dev Console, you have to download it as a [Chrome Extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-
-<details><summary> Hint 3 </summary>
-
-![the solution](https://i.imgur.com/I3BcdqO.png)
-
-</details>
-
-
-## Part 4: Refactor for Dynamic Rendering
+## Part 3: Refactor for Dynamic Rendering
 
 3 receipts is pretty limiting. Let's put them in an array and then map over them for rendering.
 
