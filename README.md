@@ -8,9 +8,7 @@ Build a prototype of this short order receipts tracker.
 
 ## Part 1: Get Started
 
-Create a new folder for this project. Make an `index.html` and `app.js` ... follow the notes from class/lab to create an App component that renders
- an `h1` with some text inside it
-
+Spin up a new create-react-app called 'korrila'.
 
 ## Part 2: Sample Receipts
 
