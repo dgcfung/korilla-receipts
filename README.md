@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://pbs.twimg.com/profile_images/512615819260350464/WBaDCSWI.jpeg"/>
+<p>
+
 # Korrila React Receipts
 
 Korilla is Korean barbecue tacos truck that makes thousands of hungry customers happy every year.
@@ -171,8 +175,6 @@ const receipts = [
 </details>
 
 ## Hungry For More
-
-You'll have to read ahead in the notes...
 
 Add a click event on the receipt that changes the value of paid from false to true. Once clicked the receipt should immediately disappear from the browser view
 
