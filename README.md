@@ -21,7 +21,7 @@ You'll be rendering some sample receipts:
 ```js
 const receipt1 =
   {
-    person: 'Karolin',
+    person: 'Bruno',
     order: {
       main: 'Burrito',
       protein: 'Organic Tofu',
@@ -36,7 +36,7 @@ const receipt1 =
     paid: false
   }
 const receipt2 = {
-  person: 'Jerrica',
+  person: 'Katelyn',
   order: {
     main: 'Rice Bowl',
     protein: 'Ginger Soy Chix',
@@ -51,7 +51,7 @@ const receipt2 = {
   paid: false
 }
 const receipt3 = {
-  person: 'Matt',
+  person: 'Andre',
   order: {
     main: 'Salad Bowl',
     protein: 'Organic Tofu',
