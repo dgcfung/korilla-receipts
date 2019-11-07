@@ -94,7 +94,7 @@ Hungry for More: render the toppings
 
 Add the next two receipts to state and make two more Receipt components so that you get a veiw like this (a little css provided for clarity, but not required)
 
-![korilla receipts rendered Mark](https://i.imgur.com/27V4KW8.png)
+![korilla receipts](korilla.png)
 
 <!-- ![korilla receipts rendered Jerrica ](https://i.imgur.com/QMwgKOK.png) -->
 
