@@ -21,7 +21,7 @@ You'll be rendering some sample receipts:
 ```js
 const receipt1 =
   {
-    person: 'Karolin',
+    person: 'Andre',
     order: {
       main: 'Burrito',
       protein: 'Organic Tofu',
@@ -36,7 +36,7 @@ const receipt1 =
     paid: false
   }
 const receipt2 = {
-  person: 'Mark',
+  person: 'Katelyn',
   order: {
     main: 'Rice Bowl',
     protein: 'Ginger Soy Chix',
@@ -51,7 +51,7 @@ const receipt2 = {
   paid: false
 }
 const receipt3 = {
-  person: 'Matt',
+  person: 'Bruno',
   order: {
     main: 'Salad Bowl',
     protein: 'Organic Tofu',
@@ -120,7 +120,7 @@ Update your code so it renders the same, but instead of hard coding 3 receipts, 
 ```js
 const receipts = [
   {
-    person: 'Karolin',
+    person: 'Andre',
     order: {
       main: 'Burrito',
       protein: 'Organic Tofu',
@@ -135,7 +135,7 @@ const receipts = [
     paid: false
   },
   {
-    person: 'Mark',
+    person: 'Katelyn',
     order: {
       main: 'Rice Bowl',
       protein: 'Ginger Soy Chix',
@@ -150,7 +150,7 @@ const receipts = [
     paid: false
   },
   {
-    person: 'Matt',
+    person: 'Bruno',
     order: {
       main: 'Salad Bowl',
       protein: 'Organic Tofu',
