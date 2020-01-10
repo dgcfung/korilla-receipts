@@ -74,7 +74,7 @@ export const receipts = [
 ```
 - Normally this data would probably come from an API call. We're not using an API, so we'll have to simulate one by creating a helper file inside the `src` directory called `receipts.js`. Paste the above code into this new file.
 - To access this data from inside `App.js` we need to import it at the top of our code with `import { receipts } from "./receipts";`
-- This app is going to use state. Convert `App.js` to a Class component.
+- This app is going to use state. Prep `App.js` by converting it to a class component.
   - As you are new to React, **you are _highly_ encouraged to you code this out manually,** rather than copy pasting from another source. The more you practice, the sooner you will get these boilerplates into your fingertips. As you'll be creating many more React components throughout the cohort, consider it an immensely good idea to be able to cook this up from memory.
 ```
 class App extends React.Component {
