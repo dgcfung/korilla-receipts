@@ -12,6 +12,10 @@ Build a prototype of this short order receipts tracker.
 
 ## Part 1: Get Started
 
+- Fork and clone!
+
+- This assignment should include at least **6 commits**.
+
 - Inside your cloned directory, spin up a new react app called "korilla" with `create-react-app korrila`.
 
 ## Part 2: Sample Receipts
@@ -71,6 +75,22 @@ export const receipts = [
 - Normally this data would probably come from an API call. We're not using an API, so we'll have to simulate one by creating a helper file inside the `src` directory called `receipts.js`. Paste the above code into this new file.
 - To access this data from inside `App.js` we need to import it at the top of our code with `import { receipts } from "./receipts";`
 - This app is going to use state. Convert `App.js` to a Class component.
+  - As you are new to React, **you are _highly_ encouraged to you code this out manually,** rather than copy pasting from another source. The more you practice, the sooner you will get these boilerplates into your fingertips. As you'll be creating many more React components throughout the cohort, consider it an immensely good idea to be able to cook this up from memory.
+```
+class App extends React.Component {
+
+  render() {
+    return (
+      <div className="App">
+      
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 - Oh yeah, React has provided some default code inside of `App.js`. Strip out the info you don't need if you haven't already.
 - Add the first receipt to the state of the app:
 
