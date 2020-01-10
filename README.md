@@ -12,115 +12,16 @@ Build a prototype of this short order receipts tracker.
 
 ## Part 1: Get Started
 
-Spin up a new create-react-app called 'korrila'.
+- Inside your cloned directory, spin up a new react app called "korilla" with `create-react-app korrila`.
 
 ## Part 2: Sample Receipts
 
 You'll be rendering some sample receipts:
 
 ```js
-const receipt1 =
+export const receipts = [
   {
-    person: 'Andre',
-    order: {
-      main: 'Burrito',
-      protein: 'Organic Tofu',
-      rice: 'Purple Rice',
-      sauce: 'Green Crack',
-      toppings: [
-        'Baby Bok Choy', 'Cucumber Kimchi'
-      ],
-      drink: 'Korchata',
-      cost: 22
-    },
-    paid: false
-  }
-const receipt2 = {
-  person: 'Katelyn',
-  order: {
-    main: 'Rice Bowl',
-    protein: 'Ginger Soy Chix',
-    rice: 'Sticky Rice',
-    sauce: 'Korilla',
-    toppings: [
-      'Yuzu Pickled Sweet Pepper', 'Kale'
-    ],
-    drink: 'Korchata',
-    cost: 19
-  },
-  paid: false
-}
-const receipt3 = {
-  person: 'Bruno',
-  order: {
-    main: 'Salad Bowl',
-    protein: 'Organic Tofu',
-    rice: 'none',
-    sauce: "K'lla",
-    toppings: [
-      'Blue Potato Salad', 'Pico De Gallo', 'Red Kimchi'
-    ],
-    drink: 'Sparkling Blood Orange Soda',
-    cost: 20
-  },
-  paid: true
-}
-
-```
-
-- Add the first receipt to the state of the app:
-
-```js
-class App extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = receipt1
-  }
-```
-
-
-- Make a Receipt component that renders the first receipt's
-  - person
-  - order
-      - main
-      - protein
-      - rice
-      - sauce
-      - drink
-      - cost
-
-Hungry for More: render the toppings
-
-
-Add the next two receipts to state and make two more Receipt components so that you get a veiw like this (a little css provided for clarity, but not required)
-
-![korilla receipts](korilla.png)
-
-<!-- ![korilla receipts rendered Jerrica ](https://i.imgur.com/QMwgKOK.png) -->
-
-<details><summary> Hint 1</summary>
-
-![the solution](https://i.imgur.com/OQ8sEtr.png)
-
-</details>
-
-<details><summary> Hint 2 </summary>
-
-![the solution](https://i.imgur.com/cQMrYAX.png)
-
-</details>
-
-
-## Part 3: Refactor for Dynamic Rendering
-
-3 receipts is pretty limiting. Let's put them in an array and then map over them for rendering.
-
-Update your code so it renders the same, but instead of hard coding 3 receipts, it maps over the array.
-
-```js
-const receipts = [
-  {
-    person: 'Andre',
+    person: 'Steve',
     order: {
       main: 'Burrito',
       protein: 'Organic Tofu',
@@ -135,7 +36,7 @@ const receipts = [
     paid: false
   },
   {
-    person: 'Katelyn',
+    person: 'Erinn',
     order: {
       main: 'Rice Bowl',
       protein: 'Ginger Soy Chix',
@@ -150,7 +51,7 @@ const receipts = [
     paid: false
   },
   {
-    person: 'Bruno',
+    person: 'Angie',
     order: {
       main: 'Salad Bowl',
       protein: 'Organic Tofu',
@@ -162,26 +63,59 @@ const receipts = [
       drink: 'Sparkling Blood Orange Soda',
       cost: 20
     },
-    paid: true
+    paid: false
   }
 ]
+
+```
+- Normally this data would probably be coming from an API call. We're not using an API, so we'll have to similate one by creating a helper file inside the `src` directory called receipts.js. Paste the above code into this new file.
+- To access this data from inside `App.js` we need to import it at the top of our code with `import { receipts } from "./receipts";`
+- Our app is going to use state. Convert `App.js` to a Class component so that it can control state.
+- Oh yeah, React has provided some default code inside of `App.js`. Strip out the info you don't need if you haven't already.
+- Add the first receipt to the state of the app:
+
+```js
+class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = ({
+      firstReceipt: receipts[0]
+    })
+  }
 ```
 
+- Create a new `Receipt.jsx` component that renders the following by passing down props:
+  - person
+  - order
+      - main
+      - protein
+      - rice
+      - sauce
+      - drink
+      - cost
 
-<details><summary> Hint 4 </summary>
+  - **Optional Practice:** Create and render another component inside this one called `Toppings.jsx` and render the toppings inside by passing down additional props.
+- Render the `Receipt.jsx` component in the return of `App.js`. Don't forget to import new components at the top of your code when you need them!
+- Add the two additional receipts to state and render them inside two more `Receipt` components. **DO NOT** make new components, instead pass down different prop values.
 
-![the solution](https://i.imgur.com/A1ZQTzW.png)
+## Part 3: Refactor for Dynamic Rendering
 
-</details>
+- 3 seperately coded receipt components is pretty inefficient. Let's redfine our state to be the entire array of receipts:
+```
+this.state = ({
+      firstReceipt: receipts[0]
+    })
+ ```
+- Now we can map over them to render each one! Update your code so it renders the same, but instead of hard coding 3 receipts, use a map so you only have to code the `Receipt` component once.
 
-## Hungry For More
+- You should have all three receipts rendered by now. Add some basic styling at the very least so it is easy to distinguish them from each other.
 
-Add a click event on the receipt that changes the value of paid from false to true. Once clicked the receipt should immediately disappear from the browser view
+## Bonus
 
-You'll have to research on your own...
+Add a button with an Onclick to your receipts that changes the value of paid from **false** to **true**. Once clicked the receipt should immediately disappear from the browser view.
 
-How do you style react components within react?
+This may require some additional research...
 
-[A nice place to start](https://codeburst.io/4-four-ways-to-style-react-components-ac6f323da822)
+## CSS Bonus
 
-But also, [why would one style components...rather than use a good old css file?](https://medium.com/@perezpriego7/css-evolution-from-css-sass-bem-css-modules-to-styled-components-d4c1da3a659b)
+Animate each receipt to uniformly transition to a bigger size when the mouse hover over it.
