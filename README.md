@@ -68,9 +68,9 @@ export const receipts = [
 ]
 
 ```
-- Normally this data would probably be coming from an API call. We're not using an API, so we'll have to similate one by creating a helper file inside the `src` directory called receipts.js. Paste the above code into this new file.
+- Normally this data would probably come from an API call. We're not using an API, so we'll have to simulate one by creating a helper file inside the `src` directory called `receipts.js`. Paste the above code into this new file.
 - To access this data from inside `App.js` we need to import it at the top of our code with `import { receipts } from "./receipts";`
-- Our app is going to use state. Convert `App.js` to a Class component so that it can control state.
+- This app is going to use state. Convert `App.js` to a Class component.
 - Oh yeah, React has provided some default code inside of `App.js`. Strip out the info you don't need if you haven't already.
 - Add the first receipt to the state of the app:
 
@@ -96,26 +96,26 @@ class App extends React.Component {
 
   - **Optional Practice:** Create and render another component inside this one called `Toppings.jsx` and render the toppings inside by passing down additional props.
 - Render the `Receipt.jsx` component in the return of `App.js`. Don't forget to import new components at the top of your code when you need them!
-- Add the two additional receipts to state and render them inside two more `Receipt` components. **DO NOT** make new components, instead pass down different prop values.
+- Add the two remaining receipts to state and render them inside two more `Receipt` components. **DO NOT** make new components, instead pass down different prop values.
 
 ## Part 3: Refactor for Dynamic Rendering
 
-- 3 seperately coded receipt components is pretty inefficient. Let's redfine our state to be the entire array of receipts:
+- Three seperately coded receipt components is pretty inefficient. Let's redefine our state to be the entire array of receipts:
 ```
 this.state = ({
-      firstReceipt: receipts[0]
+      receipts: receipts
     })
  ```
-- Now we can map over them to render each one! Update your code so it renders the same, but instead of hard coding 3 receipts, use a map so you only have to code the `Receipt` component once.
+- Now we can map over our array of receipts to render each one! Update your code so it renders the same as before, but instead of hard coding three receipts, use a map so you only have to code the `Receipt` component once.
 
-- You should have all three receipts rendered by now. Add some basic styling at the very least so it is easy to distinguish them from each other.
+- You should have all three receipts rendered by now. Add some basic styling (at the very least) to make it easier to distinguish them from each other.
 
 ## Bonus
 
-Add a button with an Onclick to your receipts that changes the value of paid from **false** to **true**. Once clicked the receipt should immediately disappear from the browser view.
+Add a button with an onClick to your receipts that changes the value of paid from **false** to **true**. Once clicked the receipt should immediately disappear from the browser view.
 
 This may require some additional research...
 
 ## CSS Bonus
 
-Animate each receipt to uniformly transition to a bigger size when the mouse hover over it.
+Animate each receipt to uniformly transition to a bigger size on a mouse hover.
