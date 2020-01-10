@@ -40,7 +40,7 @@ export const receipts = [
     paid: false
   },
   {
-    person: 'Erinn',
+    person: 'Angie',
     order: {
       main: 'Rice Bowl',
       protein: 'Ginger Soy Chix',
@@ -55,7 +55,7 @@ export const receipts = [
     paid: false
   },
   {
-    person: 'Angie',
+    person: 'Erinn',
     order: {
       main: 'Salad Bowl',
       protein: 'Organic Tofu',
