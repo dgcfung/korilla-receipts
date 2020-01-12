@@ -6,7 +6,7 @@
 
 Korilla is Korean barbecue tacos truck that makes thousands of hungry customers happy every year.
 
-Their CEO is thinking of updating their short order tracking system using React.
+The CEO is thinking of updating their short order tracking system to use React.
 
 Build a prototype of this short order receipts tracker.
 
@@ -72,10 +72,11 @@ export const receiptData = [
 ]
 
 ```
-- Normally this data would probably come from an API call. We're not using an API, so we'll have to simulate one by creating a helper file inside the `src` directory called `receipts.js`. Paste the above code into this new file.
-- To access this data from inside `App.js` we need to import it at the top of our code with `import { receiptData } from "./receipts";`
-- This app is going to use state. Prep `App.js` by converting it to a class component.
-  - As you are new to React, **you are _highly_ encouraged to code this out manually,** rather than copy pasting from another source. The more you practice, the sooner you will get these boilerplates into your fingertips. As you'll be creating many more React components throughout the cohort, consider it an immensely good idea to be able to cook this up from memory.
+- Normally the above data would probably come from an API call. As we are not using an API, we will have to simulate one by creating a helper file. Inside `src`, create a new directory called `data`. Inside `data`, create a new file called `receipts.js`. Paste the above code into this new file.
+- To access this data we need to import it at the top of `App.js` with `import { receiptData } from "./data/receipts";`
+- This app is going to use state. Prep `App.js` by converting it into a class component.
+  - As you are new to React, **you are _HIGHLY_ encouraged to code this out manually**, rather than copy pasting the below code. The more you practice, the sooner you will get these boilerplates into your fingertips. As you'll be creating many more React components throughout the cohort, consider it an immensely good idea to be able to cook this up from memory.
+  - Seriously, look at the code below and type out what you need by hand.
 ```
 class App extends React.Component {
 
