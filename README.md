@@ -77,7 +77,7 @@ export const receiptData = [
 - This app is going to use state. Prep `App.js` by converting it into a class component.
   - As you are new to React, **you are _HIGHLY_ encouraged to code this out manually**, rather than copy pasting the below code. The more you practice, the sooner you will get these boilerplates into your fingertips. As you'll be creating many more React components throughout the cohort, consider it an immensely good idea to be able to cook this up from memory.
   - Seriously, look at the code below and type out what you need by hand.
-```
+```js
 class App extends React.Component {
 
   render() {
