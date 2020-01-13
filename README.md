@@ -107,7 +107,7 @@ class App extends React.Component {
 
    - **Optional Practice:** Since we're only simulating API data, we don't need to use the `componentDidMount()` lifecycle method to setState, but give it a try if you're up for it. Set up a `componentDidMount()` to set the receiptData to state after the component loads.
    
-     - Warning: this will likely give you some additional rendering errors to troubleshoot. These errors can be pretty common, so it's really, really good practice to tackle them now.
+     - Warning: this will likely give you some additional rendering errors to troubleshoot. These errors can be pretty common, so it's really, really good practice to tackle them now. See if you can figure out the `&&` Gaurd Operator.
      
 - Create a new `Receipt.jsx` component that renders the following by passing down props:
   - person
