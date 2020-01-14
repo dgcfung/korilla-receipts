@@ -42,5 +42,6 @@ constructor(props){
    );
  }
 }
+// part
 
 export default App;
