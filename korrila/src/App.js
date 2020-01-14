@@ -1,28 +1,46 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {receiptData} from "./data/receipts"
+import Receipt from "./data/Receipt"
 
-// initial
+// initialgit 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+constructor(props){
+  super(props)
+  this.state=({
+    // firstReceipt: receiptData[0],
+    receipts: receiptData,
+    // secondReceipt: receiptData[1],
+    // thirdReceipt: receiptData[2]
+  })
+}
+
+// this.state = ({
+//   receipts: receiptData
+// })
+
+// componentDidMount(){
+//   // inside api call return
+//   setTimeout(()=>{
+//     this.setState({firstReceipt: receiptData[1]})
+//   }, 5000)
+  
+// }
+
+ render(){
+   console.log(this.state)
+   return(
+     <div className="App">
+       {this.state.receipts.map(receipt=> (
+      //  <h1>hihi</h1>
+       <Receipt receipt= {receipt}/>
+       ))}
+
+     </div>
+   );
+ }
 }
 
 export default App;
