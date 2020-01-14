@@ -144,4 +144,4 @@ this.state = ({
 
 ## Bonus/CSS Bonus
 
-Update your code so that when the value of `paid` on a receipt becomes **true**, the receipt disppears from the browser.
+Update your code so that when the value of `paid` on a receipt becomes **true**, the receipt disappears from the browser.
