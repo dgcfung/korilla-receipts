@@ -16,7 +16,7 @@ Build a prototype of this short order receipts tracker.
 
 - This assignment should include at least **6 commits**.
 
-- Inside your cloned directory, spin up a new react app called "korilla" with `create-react-app korrila`.
+- Inside your cloned directory, spin up a new react app called "korilla" with `npx create-react-app korrila`.
 
 ## Part 2: Sample Receipts
 
