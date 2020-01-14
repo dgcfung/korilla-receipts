@@ -118,6 +118,7 @@ class App extends React.Component {
       - sauce
       - drink
       - cost
+  - paid status
 
   - **More Optional Practice:** Create and render another component inside this one called `Toppings.jsx` and render the toppings inside by passing down additional props.
 - Render the `Receipt.jsx` component in the return of `App.js`. Don't forget to import new components at the top of your code when you need them!
@@ -135,12 +136,12 @@ this.state = ({
 
 - You should have all three receipts rendered by now. Add some basic styling (at the very least) to make it easier to distinguish them from each other.
 
-## Bonus
+## Part 4: Update State, Mate
 
-Add a button with an onClick to your receipts that changes the value of paid from **false** to **true**. Once clicked the receipt should immediately disappear from the browser view.
+- Add a button with an onClick to each receipt that toggles the value of `paid` on that specific receipt between **false** and **true**.
 
-This may require some additional research...
+- Make sure you can see the change rendering in your browser when you click the button.
 
-## CSS Bonus
+## Bonus/CSS Bonus
 
-Animate each receipt to uniformly transition to a bigger size on a mouse hover.
+Update your code so that when the value of `paid` on a receipt becomes **true**, the receipt disppears from the browser.
