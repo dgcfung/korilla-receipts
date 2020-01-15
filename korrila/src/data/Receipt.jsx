@@ -20,6 +20,8 @@ import React, {Component}from 'react';
 //     );
 //   }
 
+// hhhahahaha
+
 class Receipt extends Component {
 
     constructor(props){
