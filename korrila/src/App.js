@@ -16,6 +16,7 @@ constructor(props){
     // thirdReceipt: receiptData[2]
   })
 }
+// hwhwh
 
 // this.state = ({
 //   receipts: receiptData
